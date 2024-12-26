@@ -1,0 +1,23 @@
+Requisitos para rodar o projeto:
+
+1. Node.js >= 14.x.x
+2. React >= 17.x.x
+3. Flask >= 2.x.x (para o backend)
+4. Pacote `xlsx` para ler arquivos Excel
+5. Pacote `flask-cors` para permitir requisições CORS
+
+Instruções:
+
+1. Para instalar as dependências do frontend, rode o comando:
+   npm install
+
+2. Para iniciar o servidor do frontend:
+   npm start
+
+3. Para rodar o backend Flask, instale as dependências do Python com:
+   pip install -r requirements.txt
+
+4. Para rodar o servidor Flask:
+   python app.py
+
+Certifique-se de ter um ambiente Python configurado com as dependências necessárias. 

@@ -1,0 +1,97 @@
+Estudo do Projeto: Sistema de Upload e Processamento de Arquivos Excel com Visualização de Gráficos
+
+Objetivo do Projeto:
+Este projeto consiste na criação de uma aplicação web para fazer upload de arquivos Excel (.xlsx), processar os dados contidos nesse arquivo e exibir informações em forma de gráficos, além de mostrar os dados tabulados para o usuário.
+
+Estrutura do Projeto:
+
+1. Frontend (React)
+   - Interface com o usuário para fazer upload de arquivos Excel.
+   - Exibição de gráficos gerados a partir dos dados do arquivo.
+   - Exibição de uma tabela com os dados extraídos do Excel.
+   - Interação com o backend para realizar o upload e receber os gráficos gerados.
+
+2. Backend (Flask)
+   - Recebe o arquivo Excel via requisição HTTP (POST).
+   - Processa o arquivo Excel, extrai os dados e gera gráficos.
+   - Envia os gráficos e os dados de volta para o frontend.
+
+Tecnologias Utilizadas:
+- **Frontend:**
+  - React para construir a interface do usuário.
+  - `xlsx` (biblioteca JavaScript) para leitura e manipulação de arquivos Excel.
+  - `fetch` para fazer requisições para o backend.
+  - CSS para estilização da tabela e outros elementos da página.
+
+- **Backend:**
+  - Flask (Python) para criar o servidor e processar o backend.
+  - `openpyxl` para ler e manipular arquivos Excel no backend.
+  - `matplotlib` para geração de gráficos.
+  - `flask-cors` para permitir requisições CORS entre frontend e backend.
+  - `pandas` para manipulação eficiente dos dados extraídos do Excel.
+
+Principais Funcionalidades Implementadas:
+1. **Upload de Arquivo Excel:**
+   - O frontend permite ao usuário selecionar um arquivo Excel (.xlsx) e enviá-lo para o servidor.
+   - O backend recebe o arquivo, processa-o e retorna os dados extraídos, além dos gráficos gerados.
+
+2. **Processamento de Dados:**
+   - O backend lê o arquivo Excel e extrai os dados para apresentá-los em formato de tabela.
+   - As colunas e as linhas são lidas dinamicamente, sem a necessidade de parâmetros fixos.
+   - O backend gera gráficos a partir desses dados e os envia para o frontend.
+
+3. **Exibição de Gráficos:**
+   - O frontend recebe os gráficos gerados pelo backend e os exibe de maneira dinâmica.
+   - Os gráficos são retornados como links para imagens geradas no servidor.
+
+4. **Exibição de Tabela:**
+   - Os dados extraídos do arquivo Excel são exibidos em uma tabela HTML.
+   - O layout da tabela foi estilizado para exibir os dados de forma organizada e atraente.
+
+Melhorias Feitas:
+- Criação de um layout simples, mas funcional, para exibir os gráficos e dados de maneira limpa.
+- Adição de uma verificação de erros no upload do arquivo, garantindo uma experiência de usuário melhor.
+- Estilização da tabela e gráficos para melhorar a visualização.
+
+Desafios Encontrados:
+- Lidar com o formato e a estrutura dos arquivos Excel e garantir que os dados fossem lidos corretamente.
+- Gerar os gráficos de forma eficiente e integrá-los corretamente com o frontend.
+- Configuração do CORS entre o frontend (React) e o backend (Flask), permitindo que o navegador fizesse requisições sem bloqueios.
+
+Futuras Melhorias:
+- Implementação de uma tela de login para que diferentes usuários possam enviar arquivos e visualizar gráficos específicos.
+- Suporte para diferentes formatos de arquivos (além de Excel), como CSV.
+- Melhoria no layout da interface, com mais opções de personalização para os gráficos e tabela.
+- Validação e limpeza de dados antes de gerar os gráficos, para garantir que os dados estejam completos e corretos.
+
+Passos Realizados no Projeto:
+1. Criar a estrutura básica do projeto com React no frontend e Flask no backend.
+2. Implementar a funcionalidade de upload de arquivos Excel.
+3. Processar o arquivo no backend, extrair as informações e gerar gráficos.
+4. Exibir os dados extraídos e gráficos no frontend.
+5. Estilizar a tabela e gráficos para uma melhor experiência de visualização.
+6. Implementar a comunicação entre frontend e backend utilizando `fetch` e `flask-cors`.
+
+Requisitos do Projeto:
+- Node.js >= 14.x.x
+- React >= 17.x.x
+- Flask >= 2.x.x
+- Pacote `xlsx` para ler arquivos Excel
+- Pacote `flask-cors` para permitir requisições CORS
+- Pacote `openpyxl` para manipulação de arquivos Excel
+- Pacote `matplotlib` para geração de gráficos
+
+Instruções de Execução:
+1. Para o frontend:
+   - Instale as dependências com `npm install`.
+   - Inicie o servidor com `npm start`.
+
+2. Para o backend:
+   - Instale as dependências do Python com `pip install -r requirements.txt`.
+   - Execute o backend com `python app.py`.
+
+Links Úteis:
+- [React Documentation](https://reactjs.org/docs/getting-started.html)
+- [Flask Documentation](https://flask.palletsprojects.com/en/2.2.x/)
+- [Matplotlib Documentation](https://matplotlib.org/stable/users/index.html)
+- [OpenPyXL Documentation](https://openpyxl.readthedocs.io/en/stable/)
