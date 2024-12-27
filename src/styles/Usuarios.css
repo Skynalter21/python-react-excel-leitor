@@ -1,0 +1,36 @@
+.usuarios-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .usuarios-lista {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .usuarios-lista li {
+    background: #f4f4f4;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .usuarios-sem-dados {
+    text-align: center;
+  }
+  
+  .usuarios-sem-dados button,
+  .usuarios-error button {
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .usuarios-sem-dados button:hover,
+  .usuarios-error button:hover {
+    background: #0056b3;
+  }
+  

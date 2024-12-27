@@ -1,0 +1,71 @@
+/* Estilos gerais da navbar */
+.navbar {
+  background-color: #007bff;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-end; /* Alinha os itens no final da navbar */
+  align-items: center;
+}
+
+.navbar-links {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin-right: auto; /* Mantém os links alinhados à esquerda */
+}
+
+.navbar-links li {
+  margin-right: 20px;
+}
+
+.navbar-link, .navbar-button {
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navbar-link:hover, .navbar-button:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.navbar-button {
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navbar-button:hover {
+  background-color: #cc0000; /* Vermelho mais forte no hover */
+}
+
+/* Estilos para telas menores (responsividade) */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-end; /* Alinha todos os itens à direita em telas menores */
+  }
+
+  .navbar-links {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-links li {
+    margin-bottom: 10px;
+  }
+}
